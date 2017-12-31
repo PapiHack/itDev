@@ -1,0 +1,106 @@
+{% extends 'partials/base.html' %}
+
+{% load static %}
+
+{% block metaContent %}
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="PapiHack"/>
+    <link rel="shortcut icon" href="{% static 'ico/favicon.png' %}"/>
+{% endblock metaContent %}
+
+{% block title %} ItDev - Coming Soon {% endblock title %}
+
+{% block styleContent %} 
+     <!-- Bootstrap core CSS -->
+     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+
+     <!-- Custom styles for this template -->
+     <link href="{% static 'css/soon.css' %}" rel="stylesheet"/>
+     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'/>
+
+{% endblock styleContent %}
+
+{% block content %}
+        <!-- START BODY -->
+  <body class="nomobile">
+
+        <!-- START HEADER -->
+        <section id="header">
+            <div class="container">
+                <header>
+                    <!-- HEADLINE -->
+                    <h1 data-animated="GoIn"><b></b> mon site arrive bientôt...</h1>
+                </header>
+                <!-- START TIMER -->
+                <div id="timer" data-animated="FadeIn">
+                    <p id="message"></p>
+                    <div id="days" class="timer_box"></div>
+                    <div id="hours" class="timer_box"></div>
+                    <div id="minutes" class="timer_box"></div>
+                    <div id="seconds" class="timer_box"></div>
+                </div>
+                <!-- END TIMER -->
+                <div class="col-lg-4 col-lg-offset-4 mt centered">
+                    <h4>M'INFORMER DU LANCEMENT</h4>
+                    <form class="form-inline" role="form" action="{% url 'accueil' %}" method="post">
+                       {% csrf_token %}
+                      
+                      <div class="form-group">
+                        <input type="email" class="form-control" name="ml" id="ml" placeholder="Enter email"/>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Soumettre</button>
+                    </form>            
+                </div>
+                {% if envoi %}
+                    <div class="col-xs-2 alert alert-success" id="popup">
+                         <p><strong>Mail enregistré !</strong></p>
+                      </div>
+                      <script> setTimeout(function(){ $("#popup").show("slow").delay(2000).hide("fast");
+                        }, 2000) </script>
+                      {% endif %}
+            </div>
+            <!-- LAYER OVER THE SLIDER TO MAKE THE WHITE TEXTE READABLE -->
+            <div id="layer"></div>
+            <!-- END LAYER -->
+            <!-- START SLIDER -->
+            <div id="slider" class="rev_slider">
+                <ul>
+                  <li data-transition="slideleft" data-slotamount="1" data-thumb="{% static '/img/slider/1.jpeg' %}">
+                    <img src="{% static 'img/slider/1.jpeg' %}"/>
+                  </li>
+                  <li data-transition="slideleft" data-slotamount="1" data-thumb="{% static '/img/slider/2.jpeg' %}">
+                    <img src="{% static '/img/slider/2.jpeg' %}"/>
+                  </li>
+                  <li data-transition="slideleft" data-slotamount="1" data-thumb="{% static '/img/slider/3.jpeg' %}">
+                    <img src="{% static '/img/slider/3.jpeg' %}"/>
+                  </li>
+                  <li data-transition="slideleft" data-slotamount="1" data-thumb="{% static '/img/slider/4.jpeg' %}">
+                    <img src="{% static '/img/slider/4.jpeg' %}"/>
+                  </li>
+                </ul>
+            </div>
+            <!-- END SLIDER -->
+        </section>
+        <!-- END HEADER -->
+    
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/soon/plugins.js' %}"></script>
+        <script src="{% static 'js/soon/jquery.themepunch.revolution.min.js' %}"></script>
+        <script src="{% static 'js/soon/custom.js' %}"></script>
+      </body>
+      <!-- END BODY -->
+{% endblock content %}
