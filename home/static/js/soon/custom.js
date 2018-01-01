@@ -43,7 +43,7 @@ COMMING SOON PAGE
             seconds.html('<h1>'+s+'</h1><p>Second'+(s>1?'s':''),'</p>');
             setTimeout(setDate, 1000);
 
-            message.html('Site est en construction, Patience ! By PapiHack, the itDev...');
+            message.html('Site en construction, patience ! By PapiHack, the itDev...');
         }
     }
 })(jQuery);
