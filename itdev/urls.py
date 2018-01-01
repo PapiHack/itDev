@@ -13,8 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include, handler404
+from django.conf.urls import url, include, handler404, handler500
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 handler404 = 'itdev.views.handler404'
 handler500 = 'itdev.views.handler500'
@@ -23,3 +24,4 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('home.urls')),
 ]
+urlpatterns += staticfiles_urlpatterns()
