@@ -10,6 +10,6 @@ MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-SECRET_KEY = 'e+@i0%kr6ku^o&&$#t=yi0$$s=(4spi9(hak46*fwjqv*jc0+v'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 ALLOWED_HOSTS = ['itdev.herokuapp.com']
