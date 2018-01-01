@@ -12,4 +12,4 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = ['itdev.herokuapp.com']
+ALLOWED_HOSTS = ['itworker.herokuapp.com'']
