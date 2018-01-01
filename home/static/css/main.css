@@ -197,7 +197,7 @@ input[type="submit"] {
 }
 
 #headerwrap2 {
-	background: url(../img/header-bg2.jpg) no-repeat center top;
+	
 	margin-top: 50px;
 	padding-top:20px;
 	background-attachment: relative;
@@ -227,7 +227,7 @@ input[type="submit"] {
 /* About Wrap */
 
 #about {
-	background: url(../img/about-bg.jpg) no-repeat center top;
+	
 	padding-top:20px;
 	background-attachment: relative;
 	background-position: center center;
@@ -256,7 +256,7 @@ input[type="submit"] {
 /* Services Wrap */
 
 #services {
-	background: url(../img/services-bg.jpg) no-repeat center top;
+	
 	padding-top:20px;
 	background-attachment: relative;
 	background-position: center center;
