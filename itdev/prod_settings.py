@@ -13,4 +13,4 @@ MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-ALLOWED_HOSTS = ['itworker.herokuapp.com']
+ALLOWED_HOSTS = ['itdev.herokuapp.com']
