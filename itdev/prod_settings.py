@@ -6,6 +6,10 @@ TEMPLATE_DEBUG = False
 
 DATABASES['default'] = dj_database_url.config()
 
+MIDDLEWARE += ['whitenoise.middleware.WhiteNoiseMiddleware']
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 SECRET_KEY = 'e+@i0%kr6ku^o&&$#t=yi0$$s=(4spi9(hak46*fwjqv*jc0+v'
 
 ALLOWED_HOSTS = ['itdev.herokuapp.com']
