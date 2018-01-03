@@ -106,7 +106,8 @@ RESPONSIVE
         border-radius: 20px;
         margin-bottom: 25px;
     }
-    #slider{display: none;}
+    #slider{display: block;}
+    /*img{height: auto; width: auto;}*/
     .btn-subscribe{border-radius: 20px;}
     #contact-informations{margin-top: 24px;}
     body {

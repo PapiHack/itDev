@@ -22,7 +22,15 @@
     
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'/>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'/>
+    <style>
+      @media only screen and (max-width: 520px){
 
+       img{
+        color: red;
+       }
+      
+      }
+      </style>
 {% endblock styleContent %}
 
 {% block content %}
@@ -68,7 +76,7 @@
             <div id="layer"></div>
             <!-- END LAYER -->
             <!-- START SLIDER -->
-            <div id="slider" class="rev_slider">
+            <div id="slider" class="rev_slider" class="">
                 <ul>
                   <li data-transition="slideleft" data-slotamount="1" data-thumb="{% static '/img/slider/1.jpeg' %}">
                     <img src="{% static 'img/slider/1.jpeg' %}"/>
